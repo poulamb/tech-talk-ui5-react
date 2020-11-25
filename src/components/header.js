@@ -9,7 +9,7 @@ export default function Header() {
     <div>
       <ui5-shellbar
         primary-title="Demo Portal"
-        secondary-title="secondary title"
+        secondary-title="Tech Open Mic"
         show-notifications
         notification-count="22"
       >
