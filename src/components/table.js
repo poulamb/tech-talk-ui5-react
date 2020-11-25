@@ -1,8 +1,10 @@
 import React from "react";
-import "@ui5/webcomponents/dist/Table.js";
-import "@ui5/webcomponents/dist/TableColumn.js";
-import "@ui5/webcomponents/dist/TableRow.js";
-import "@ui5/webcomponents/dist/TableCell.js";
+import "@ui5/webcomponents/dist/Table";
+import "@ui5/webcomponents/dist/TableColumn";
+import "@ui5/webcomponents/dist/TableRow";
+import "@ui5/webcomponents/dist/TableCell";
+import "@ui5/webcomponents/dist/Button";
+// import "@ui5/webcomponents/dist/Icon";
 import data from "../tabledata";
 
 const Table = (props) => {
@@ -43,6 +45,11 @@ const Table = (props) => {
         <ui5-table-column slot="columns">
           <span style={{ lineHeight: "1.4rem" }}>Price</span>
         </ui5-table-column>
+
+        <ui5-table-column slot="columns">
+          <span style={{ lineHeight: "1.4rem" }}>Actions</span>
+        </ui5-table-column>
+
         {data.map((d) => (
           <TableRow {...d} />
         ))}
@@ -84,6 +91,9 @@ const TableRow = (props) => {
           <b>{props.price}</b>
           {props.priceUnit}
         </span>
+      </ui5-table-cell>
+      <ui5-table-cell>
+        <ui5-button design="Default" icon="edit"></ui5-button>
       </ui5-table-cell>
     </ui5-table-row>
   );
